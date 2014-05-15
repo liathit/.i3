@@ -30,7 +30,7 @@ font xft:tewi 10px
 
 #Autostart
 exec --no-startup-id compton --config ~/.i3/compton.conf -b &
-
+exec --no-startup-id nm-applet &
 
 #Assing
 assign [class="Firefox"] $ws1
@@ -39,8 +39,11 @@ assign [class="Sunflower"] $ws4
 assign [class="Steam*"] $ws5
 assign [class="psi+"] $ws3
 assign [class="Clementine"] $ws6
-#For_window
+assign [class="Skype"] $ws3
 
+#For_window
+for_window [class="Skype"] border none,  layout tabbed
+for_window [class="Skype" title="Ring*"] move top
 for_window [class="psi+"] border none,  layout tabbed
 for_window [class="Google-chrome"] border none
 for_window [class="mpv"] floating enable

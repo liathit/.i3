@@ -31,6 +31,7 @@ font xft:tewi 10px
 #Autostart
 exec --no-startup-id compton --config ~/.i3/compton.conf -b &
 exec --no-startup-id nm-applet &
+exec --no-startup-id setxkbmap -layout us,ru -variant ,winkeys -option grp:caps_toggle,grp_led:scroll,terminate:ctrl_alt_bksp,compose:ralt &
 
 #Assing
 assign [class="Firefox"] $ws1

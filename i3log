@@ -1,0 +1,8 @@
+05/18/2014 02:31:28 PM - ERROR: Using Xinerama instead of RandR. This option should be avoided at all cost because it does not refresh the list of screens, so you cannot configure displays at runtime. Please check if your driver really does not support RandR and disable this option as soon as you can.
+05/18/2014 02:31:28 PM - i3 4.6 (2013-08-07, branch "tags/4.6") starting
+05/18/2014 02:31:28 PM - Parsing configfile /home/liathit/.i3/config
+deciding for version 4 due to this line: # i3 config file (v4)
+05/18/2014 02:31:28 PM - [libi3] libi3/font.c Using Pango font tewi, size 10
+05/18/2014 02:31:28 PM - ERROR: PCRE regular expression compilation failed at 0: nothing to repeat
+05/18/2014 02:31:28 PM - ERROR: PCRE regular expression compilation failed at 0: nothing to repeat
+ERROR: Another window manager seems to be running (X error 10)

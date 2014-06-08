@@ -33,6 +33,7 @@ exec --no-startup-id ~/.i3/rofi -key F12 &
 exec --no-startup-id xsetroot -solid "#333333"
 exec --no-startup-id compton --config ~/.i3/compton.conf -b &
 exec --no-startup-id nm-applet &
+exec --no-starup-id volti $
 exec --no-startup-id setxkbmap -layout us,ru -variant ,winkeys -option grp:caps_toggle,grp_led:scroll,terminate:ctrl_alt_bksp,compose:ralt &
 exec --no-startup-id parcellite &
 #Assing

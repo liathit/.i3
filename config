@@ -14,33 +14,32 @@ set $mod Mod4
 set $ws1 1:www
 set $ws2 2:term
 set $ws3 3:msg
-set $ws4 4:fs
-set $ws5 5:game
+set $ws4 4:steam
+set $ws5 5:editor
 set $ws6 6:music
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
-#font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-font xft:tewi 10px
+#font xft:lucy Tewi2a 10px
 # The font above is very space-efficient, that is, it looks good, sharp and
 # clear in small sizes. However, if you need a lot of unicode glyphs or
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
-# font pango:DejaVu Sans Mono 10
+font pango: Misc Tamsyn 10
 
 #Autostart
-exec --no-startup-id ~/.i3/rofi -key F12 &
+exec --no-startup-id ~/.i3/rofi -font “Tewi2a” -key F12 &
 exec --no-startup-id xsetroot -solid "#333333"
 exec --no-startup-id compton --config ~/.i3/compton.conf -b &
 exec --no-startup-id nm-applet &
-exec --no-starup-id volti $
+exec volti & 
 exec --no-startup-id setxkbmap -layout us,ru -variant ,winkeys -option grp:caps_toggle,grp_led:scroll,terminate:ctrl_alt_bksp,compose:ralt &
 exec --no-startup-id parcellite &
 #Assing
 assign [class="Firefox"] $ws1
 assign [class="Google-chrome"] $ws1
 assign [class="Dolphin"] $ws4
-assign [class="Steam*"] $ws5
+assign [class="Steam*"] $ws4
 assign [class="psi+"] $ws3
 assign [class="Clementine"] $ws6
 assign [class="Skype"] $ws3
@@ -205,26 +204,24 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
        
-       status_command i3status -c ~/.i3/i3status.conf
+       status_command i3status --config ~/.i3/i3status.conf
        position top
  colors {
-        background #151101
-        statusline #b3aa95
-        separator #42717B
+        background #3c3c3c
+        statusline #bbbbbb
+        separator #0066cc
 
-		focused_workspace  #5199B0 #5199B0 #ffffff
-        active_workspace   #333333 #5f676a #C1B9E4
-        inactive_workspace #333333 #202020 #6D878D	
-        urgent_workspace   #D23D3D #E84F4F #ffffff
+        focused_workspace 		 #ad7fa8 #75507b #ffffff
+	active_workspace		 #75507b #ad7fa8 #ffffff
+	inactive_workspace		 #3c3c3c #3c3c3c #aaaaaa
+	urgent_workspace		 #df5757 #c22f2f #ffffff
     }
 }
 
-# class                 border  backgr. text    indicator
-client.focused          #5199B0 #6D878D #ffffff #666666
-client.focused_inactive #21362F #54695C #b3aa95 #484e50
-client.unfocused        #333333 #222222 #b3aa95 #b3aa95
-client.urgent           #D23D3D #E84F4F #ffffff #900000
-  
+# class                  border  backgr. text    indicator
+client.focused            #ad7fa8 #75507b #ffffff #ad7fa8
+client.focused_inactive   #555753 #3c3c3c #ffffff #ad7fa8
+client.unfocused          #555753 #3c3c3c #888888 #ad7fa8
+client.urgent             #ad7fa8 #ad7fa8 #ffffff #ff0000
     
-
 

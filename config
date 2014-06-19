@@ -28,8 +28,8 @@ set $ws6 6:music
 font pango: Misc Tamsyn 10
 
 #Autostart
-exec --no-startup-id ~/.i3/rofi -font “Tewi2a” -key F12 &
-exec --no-startup-id xsetroot -solid "#333333"
+exec --no-startup-id feh --bg-scale Pictures/wallpaper-484896.jpg &
+exec --no-startup-id ~/.i3/rofi -font "Tewi2a" -key F12 &
 exec --no-startup-id compton --config ~/.i3/compton.conf -b &
 exec --no-startup-id nm-applet &
 exec volti & 
@@ -84,7 +84,7 @@ floating_modifier $mod
 bindsym $mod+Return exec urxvt-256color
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+c kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
